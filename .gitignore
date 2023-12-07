@@ -1,9 +1,0 @@
-# End to End Tests
-.idea/
-dist/
-node_modules/
-runner-results/
-*.log
-*.txt
-cypress/downloads/
-cypress/screenshots/
