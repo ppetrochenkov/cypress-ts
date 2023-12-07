@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "cypress/",
+    "paths": {
+      "@page-objects/*": ["integration/src/page-objects/*"],
+      "@models/*": ["integration/src/models/*"],
+      "@utils/*": ["integration/src/utils/*"],
+      "@fixtures/*": ["fixtures/*"]
+    },
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "skipLibCheck": true,
+    "outDir": "./dist"
+  },
+  "include": ["**/*.ts", "node_modules/cypress"],
+  "exclude": ["cypress.config.ts", "node_modules"]
+}
