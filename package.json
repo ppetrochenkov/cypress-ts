@@ -8,8 +8,8 @@
   "license": "ISC",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headed --browser chrome",
-    "cypress:parallel": "cypress-parallel -s cypress:run -t 4"
+    "test": "npm start & cypress run --browser chrome",
+    "test:parallel": "cypress-parallel -s cypress:run -t 4"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
