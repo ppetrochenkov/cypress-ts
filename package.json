@@ -8,14 +8,13 @@
   "license": "ISC",
   "scripts": {
     "cypress:open": "cypress open",
-    "test": "npm start & cypress run --browser chrome",
-    "test:parallel": "cypress-parallel -s cypress:run -t 4"
+    "test": "cypress run --browser chrome"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
     "cypress": "^13.6.0",
-    "cypress-parallel": "^0.14.0",
     "cypress-xpath": "^2.0.1",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0"
   },
   "dependencies": {

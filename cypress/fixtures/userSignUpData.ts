@@ -1,4 +1,4 @@
-import {UserSignUp, Gender} from "../integration/src/models/user-sign-up";
+import {UserSignUp, Gender} from "../e2e/src/models/user-sign-up";
 
 export let userSignUpData: UserSignUp = {
     name: 'TestUser',

@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": "cypress/",
     "paths": {
-      "@page-objects/*": ["integration/src/page-objects/*"],
-      "@models/*": ["integration/src/models/*"],
-      "@utils/*": ["integration/src/utils/*"],
+      "@page-objects/*": ["e2e/src/page-objects/*"],
+      "@models/*": ["e2e/src/models/*"],
+      "@utils/*": ["e2e/src/utils/*"],
       "@fixtures/*": ["fixtures/*"]
     },
     "target": "es5",

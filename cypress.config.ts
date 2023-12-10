@@ -5,7 +5,9 @@ export default defineConfig({
         baseUrl: 'https://automationexercise.com/',
         pageLoadTimeout: 20000,
         defaultCommandTimeout: 10000,
-        specPattern: `cypress/integration/tests/**/*.spec.ts`,
+        specPattern: `cypress/e2e/tests/**/*.spec.ts`,
+        screenshotOnRunFailure: true,
+        video: false,
         env: {
             existingUser: {
                 name: 'TestUser',
