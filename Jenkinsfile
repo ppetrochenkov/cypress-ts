@@ -1,19 +1,30 @@
 pipeline {
-
-  agent {
-    docker {
-      image 'cypress/included:13.6.1'
+    agent {
+        docker {
+            image 'cypress/included:13.6.1'
+        }
     }
-  }
-
-  stages {
-
-    stage('cypress test') {
-      steps {
-        echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        sh "docker run -it -v $PWD:/e2e -w /e2e --name cypress_cli --rm cypress/included:13.6.1 -b chrome"
-      }
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm ci'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                sh 'npm run test'
+            }
+        }
     }
-
-  }
+    post {
+        always {
+            junit 'cypress/results/*.xml'
+        }
+    }
 }
