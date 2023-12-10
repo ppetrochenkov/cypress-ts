@@ -1,5 +1,11 @@
 pipeline {
 
+  agent {
+    docker {
+      image 'cypress/included:13.6.1'
+    }
+  }
+
   stages {
 
     stage('cypress test') {
