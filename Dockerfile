@@ -1,4 +1,3 @@
-
 ARG NODE_VERSION='20.10.0'
 ARG CHROME_VERSION='120.0.6099.71-1'
 
@@ -15,4 +14,4 @@ COPY ./cypress ./cypress
 
 RUN npm ci
 
-ENTRYPOINT ["npm", "run", "test"]
+#ENTRYPOINT ["npm", "run", "test"]
