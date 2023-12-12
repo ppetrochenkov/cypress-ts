@@ -12,4 +12,4 @@ COPY ./cypress.config.ts .
 COPY ./tsconfig.json .
 COPY ./cypress ./cypress
 
-RUN npm ci && sleep 300
+RUN npm ci
