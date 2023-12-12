@@ -13,5 +13,3 @@ COPY ./tsconfig.json .
 COPY ./cypress ./cypress
 
 RUN npm ci
-
-#ENTRYPOINT ["npm", "run", "test"]
