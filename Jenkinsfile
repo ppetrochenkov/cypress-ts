@@ -1,13 +1,11 @@
 pipeline {
     agent {
-        dockerfile {
-           reuseNode true
-        }
+        dockerfile true
     }
     stages {
         stage('Cypress tests') {
             steps {
-                sh 'sleep 120'
+                sh 'ls -la node_modules'
                 sh 'npm run test'
             }
         }

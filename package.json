@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "cypress:open": "cypress open",
-    "test": "./node_modules/.bin/cypress run --browser chrome"
+    "test": "cypress run --browser chrome"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
