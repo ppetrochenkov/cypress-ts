@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        dockerfile true
+        dockerfile {
+           reuseNode true
+        }
     }
     stages {
         stage('Cypress tests') {
