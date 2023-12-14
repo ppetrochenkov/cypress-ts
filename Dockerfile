@@ -17,3 +17,5 @@ COPY ./cypress ./cypress
 
 RUN npm ci
 RUN npx cypress verify
+RUN ls -la
+RUN ls -la node_modules
