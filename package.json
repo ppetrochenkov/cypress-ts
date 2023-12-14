@@ -9,7 +9,7 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
-    "cypress:test": "cypress run --browser chrome"
+    "cypress:test": "NO_COLOR=1 cypress run --browser chrome"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
