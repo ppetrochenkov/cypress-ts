@@ -4,7 +4,6 @@ ARG CYPRESS_VERSION='13.6.0'
 
 FROM cypress/factory:3.3.0
 RUN node --version
-RUN npm --version
 
 WORKDIR /e2e
 
@@ -14,8 +13,3 @@ COPY ./tsconfig.json .
 
 COPY ./cypress.config.ts .
 COPY ./cypress ./cypress
-
-RUN npm ci
-RUN npx cypress verify
-RUN ls -la
-RUN ls -la node_modules
