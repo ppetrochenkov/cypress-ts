@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  cypress-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "cypress-tests:1.0.0"
+    container_name: "cypress-tests"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/e2e
+    working_dir: /e2e
+    command: sh -c "npm ci && npm run cypress:verify && npm run cypress:test"

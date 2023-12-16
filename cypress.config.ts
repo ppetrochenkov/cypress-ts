@@ -1,6 +1,11 @@
-import { defineConfig } from 'cypress'
+import { defineConfig } from 'cypress';
+import * as cypressSplit from 'cypress-split';
 
 export default defineConfig({
+    setupNodeEvents(on, config) {
+        cypressSplit(on, config);
+        return config;
+    },
     e2e: {
         baseUrl: 'https://automationexercise.com/',
         pageLoadTimeout: 20000,

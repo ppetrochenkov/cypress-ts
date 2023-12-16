@@ -7,3 +7,4 @@ runner-results/
 *.txt
 cypress/downloads/
 cypress/screenshots/
+/lib/
