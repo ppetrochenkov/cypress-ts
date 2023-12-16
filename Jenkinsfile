@@ -16,12 +16,12 @@ pipeline {
             parallel {
                 stage('1-st Thread') {
                     steps {
-                        sh "npm run cypress:test -- --env split=2,splitIndex=0"
+                        sh "cypress run --browser chrome --env split=2,splitIndex=0"
                     }
                 }
                 stage('2-nd Thread') {
                     steps {
-                        sh "npm run cypress:test -- --env split=2,splitIndex=1"
+                        sh "cypress run --browser chrome --env split=2,splitIndex=1"
                     }
                 }
             }
